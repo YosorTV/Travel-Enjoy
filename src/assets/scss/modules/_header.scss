@@ -1,0 +1,160 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    background: $darkBlue;
+    box-shadow: 0.2em 0 0.4em rgba(0, 0, 0, .45);
+    z-index: 1;
+    .logo {
+      img {
+        height: 60px;
+      }
+    }
+
+    ul {
+      text-transform: capitalize;
+      display: flex;
+      flex-wrap: wrap;
+      cursor: pointer;
+      font-family: $Roboto;
+      li {
+        padding-left: 30px;
+        color: $white;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .header-section {
+    background: $gradient1;
+
+    .hero-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 90vh;
+
+      .content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .text_wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: $ElMessiri;
+            color: $white;
+            max-width: 450px;
+            line-height: 1.1;
+            text-transform: uppercase;
+          }
+          .title{
+            padding-top: 35px;
+            opacity: 0;
+            font-size: 1.35rem;
+            color: $white;
+            font-family: $JosefinSlab;
+            max-width: 400px;
+            line-height: 1.7;
+          }
+          
+          .btn {
+            @include btn;
+          }
+        }
+      }
+    }
+
+    .show-places{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+    }
+      .door-illusion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        position: relative;
+
+        img {
+          position: absolute;
+          pointer-events: none;
+          opacity: 0;
+          width: 400px;
+          left: 55%;
+          right: 55%;
+          overflow: hidden;
+          transform: translateX(-57%);
+        }
+      }
+
+    .sideways-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 25%;
+      .line {
+        height: 0;
+        display: flex;
+        align-items: flex-end;
+        width: 20px;
+        right: 30px;
+        border-left: 2px solid rgba(0, 0, 0, .5);
+        position: relative;
+        &::before{
+        content: "";
+        position: absolute;
+        right: 54%;
+        width: 20px;
+        height: 20px;
+        background-color: $purple;
+        border-radius: 50%;
+        }
+      }
+      .places-name {
+        display: flex;
+        flex-direction: column;
+        pointer-events: all;
+        font-family: $ElMessiri;
+        padding-top: 35px;
+
+        li {
+          text-transform: uppercase;
+          line-height: 2.5;
+          text-align: right;
+          letter-spacing: 2px;
+  
+          a {
+            font-size: 24px;
+            color: $lightGrey;
+            font-weight: bold;
+            transition: ease 1s;
+            &:focus{
+              font-size: 26px;
+              color: $purple;
+            }
+          }
+          .active{
+            color: $purple;
+          }
+        }
+      }
+    }
+  }
+}
+

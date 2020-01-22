@@ -1,0 +1,65 @@
+@mixin scrollbars($size) {
+
+  // For Google Chrome
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $darkBlue;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $white;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $white;
+    scrollbar-track-color: $darkBlue;
+  }
+}
+
+@mixin btn($width: 60%, $height: 60%, $font: 16px, $top: 35px) {
+  position: relative;
+  top: $top;
+  padding: 15px 30px;
+  border: 4px solid $white;
+  text-transform: uppercase;
+  color: $white;
+  background: none;
+  width: 60%;
+  height: 60px;
+  font-size: $font;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background: $darkBlue;
+    transform: skew(45deg);
+    transition: .4s linear;
+  }
+
+  &::before {
+    top: -4px;
+    left: 10%;
+  }
+
+  &::after {
+    bottom: -4px;
+    right: 10%;
+  }
+
+  &:hover::before {
+    left: 80%;
+  }
+
+  &:hover::after {
+    right: 80%;
+  }
+}
