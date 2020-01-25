@@ -1,0 +1,56 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: $white;
+
+  .main-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 35px;
+    color: $white;
+    margin-top: 10vh;
+    background: $darkBlue;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: $ElMessiri;
+      color: $darkBlue;
+      line-height: 1.1;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.35rem;
+      color: $darkBlue;
+      font-family: $JosefinSlab;
+      line-height: 1.7;
+    }
+
+    .main_card-trains {
+      opacity: 0;
+      margin-top: 35px;
+      transition: .3s ease-in-out;
+      display: grid;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      padding: 35px;
+      background: $white;
+    }
+
+    .main_card-flights {
+      opacity: 0;
+      display: grid;
+      transition: .6s ease-in-out;
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row: 2;
+      padding: 35px;
+      background: $white;
+      margin-bottom: 35px;
+    }
+  }
+}
