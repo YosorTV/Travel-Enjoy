@@ -1,16 +1,15 @@
 .main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background: $white;
+  height: 90vh;
+  margin-top: 5vh;
 
   .main-cards {
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr;
     grid-column-gap: 35px;
     color: $white;
-    margin-top: 10vh;
     background: $darkBlue;
 
     h2 {
@@ -31,26 +30,78 @@
     }
 
     .main_card-trains {
-      opacity: 0;
-      margin-top: 35px;
-      transition: .3s ease-in-out;
+      position: relative;
+      top: 35px;
+      transition: .5s ease-in-out;
       display: grid;
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: 2;
+      grid-row: 1;
       padding: 35px;
       background: $white;
     }
 
     .main_card-flights {
-      opacity: 0;
+      position: relative;
+      bottom: 35px;
       display: grid;
-      transition: .6s ease-in-out;
-      grid-column-start: 3;
-      grid-column-end: 5;
+      transition: .5s ease-in-out;
+      grid-column-start: 2;
+      grid-column-end: 4;
       grid-row: 2;
       padding: 35px;
       background: $white;
-      margin-bottom: 35px;
+    }
+  }
+
+  .main-tabs {
+    display: flex;
+    flex-direction: column;
+    background: $darkBlue;
+    position: relative;
+    top: 5vh;
+    color: $white;
+
+    .main-tabs_nav {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      grid-column-gap: 35px;
+      padding: 35px;
+      width: 50%;
+      margin: 0 auto;
+      color: $white;
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-family: $ElMessiri;
+      line-height: 1.1;
+      text-transform: uppercase;
+
+      .main-tabs_item{
+        padding-bottom: 15px;
+      }
+
+      .main-tabs_item.is-active{
+        border-bottom: 1px solid $white;
+        width: 25%;
+      }
+    }
+
+    .main-tabs_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .tab{
+        padding: 35px;
+        display: none;
+      }
+      
+      .is-active{
+        display: block;
+      }
     }
   }
 }
