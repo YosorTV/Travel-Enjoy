@@ -1,55 +1,60 @@
 .main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-
+  background: $darkBlue;
   .main-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 2fr;
     grid-column-gap: 35px;
     color: $white;
-    background: $darkBlue;
+    margin-top: 5vh;
+    overflow-x: hidden;
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       font-weight: 700;
       font-family: $ElMessiri;
       color: $darkBlue;
-      line-height: 1.1;
+      padding-bottom: 17px;
       text-transform: uppercase;
       text-align: center;
     }
 
     p {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       color: $darkBlue;
-      font-family: $JosefinSlab;
+      font-family: $Roboto;
       line-height: 1.7;
     }
 
     .main_card-trains {
-      position: relative;
-      top: 35px;
-      transition: .5s ease-in-out;
       display: grid;
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row: 1;
       padding: 35px;
       background: $white;
+      opacity: 0;
+      transform: translateX(-200px);
+      transition: all 1s ease-out;
     }
 
     .main_card-flights {
-      position: relative;
-      bottom: 35px;
       display: grid;
-      transition: .5s ease-in-out;
       grid-column-start: 2;
       grid-column-end: 4;
       grid-row: 2;
       padding: 35px;
       background: $white;
+      opacity: 0;
+      transform: translateX(200px);
+      transition: all 1s ease-out;
+    }
+
+    .fade-in{
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
@@ -58,6 +63,7 @@
     flex-direction: column;
     background: $darkBlue;
     color: $white;
+    margin-top: 5vh;
 
     .main-tabs_nav {
       display: flex;
@@ -90,7 +96,6 @@
       align-items: center;
 
       .tab{
-        padding: 35px;
         display: none;
       }
       
@@ -111,6 +116,7 @@
   
     img{
     width: 600px;
+    height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
     transition: all .5s;

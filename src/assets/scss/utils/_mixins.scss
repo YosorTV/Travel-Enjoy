@@ -7,17 +7,17 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: $darkBlue;
+    background: $white;
   }
 
   ::-webkit-scrollbar-track {
-    background: $white;
+    background: $darkBlue;
   }
 
   // For Internet Explorer
   body {
-    scrollbar-face-color: $white;
-    scrollbar-track-color: $darkBlue;
+    scrollbar-face-color: $darkBlue;;
+    scrollbar-track-color: $white;
   }
 }
 
