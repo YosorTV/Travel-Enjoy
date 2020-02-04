@@ -1,22 +1,20 @@
 .main {
   display: flex;
   flex-direction: column;
-  background: $darkBlue;
+  
   .main-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 2fr;
-    grid-column-gap: 35px;
-    color: $white;
-    margin-top: 5vh;
+    grid-column-gap: 30px;
     overflow-x: hidden;
-
+    background: $gradient2;
     h2 {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       font-weight: 700;
       font-family: $ElMessiri;
       color: $darkBlue;
-      padding-bottom: 17px;
+      padding-bottom: 14px;
       text-transform: uppercase;
       text-align: center;
     }
@@ -45,11 +43,16 @@
       grid-column-start: 2;
       grid-column-end: 4;
       grid-row: 2;
+      margin-left: 15px;
       padding: 35px;
-      background: $white;
+      background: $darkBlue;
       opacity: 0;
       transform: translateX(200px);
       transition: all 1s ease-out;
+
+      h2, p{
+        color: $white;
+      }
     }
 
     .fade-in{
@@ -61,31 +64,24 @@
   .main-tabs {
     display: flex;
     flex-direction: column;
-    background: $darkBlue;
-    color: $white;
-    margin-top: 5vh;
-
+    align-items: center;
     .main-tabs_nav {
       display: flex;
-      width: 50%;
       align-items: center;
       justify-content: space-between;
-      padding: 35px;
-      color: $white;
-      cursor: pointer;
-      font-size: 1.5rem;
-      font-weight: 700;
-      font-family: $ElMessiri;
-      line-height: 1.1;
-      margin: 0 auto;
-      text-transform: uppercase;
+      width: 64%;
+      padding: 30px;
 
-      .main-tabs_item{
-        padding-bottom: 15px;
-      }
+      cursor: pointer;
+      font-family: $ElMessiri;
+      text-transform: uppercase;
+      font-size: 24px;
+      color: $lightGrey;
+      font-weight: bold;
+      transition: ease 1s;
 
       .main-tabs_item.is-active{
-        border-bottom: 1px solid $white;
+        color: $purple;
       }
     }
 
@@ -108,7 +104,6 @@
   .main-tab_content{
     width: 100%;
     overflow: hidden;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -117,10 +112,7 @@
     img{
     width: 600px;
     height: 400px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: all .5s;
-    padding: 5px;
+    padding: 15px;
     }
   }
 }

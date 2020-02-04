@@ -8,8 +8,7 @@ const card1 = new Card({
     in Australia. Business card of Hungary are thermal spas, and in this you can see by visiting the hot springs
     with curative water. A Australian cuisine is bright and wonderful, will not leave you indifferent. Next we go to
     some of the most magnificent cities in Australia, Melbourne. Melbourne, capital of Australia, the imperial
-    form of which is evident in every corner of the city and artfully combined with modern art, music and lifestyle. All this
-    and many other interesting things you can see by going to the tour.`,
+    form of which is evident in every corner of the city and artfully combined with modern art, music and lifestyle.`,
   })
   card1.render('.main-cards');
   
@@ -22,6 +21,6 @@ const card1 = new Card({
     Monte Carlo. We will also visit Italy: Milan is the fashion capital! Encounter rich historical landmarks with
     expert guides. Visit locations designated as World Heritage Sites by the United Nations. Learn about local
     culture with in-depth tours and activities. Explore the waters of the world by cruise, kayak or surf board.
-    Get in touch with Mother Earth`,
+    Get in touch with Mother Earth.`,
   })
   card2.render('.main-cards');
