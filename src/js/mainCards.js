@@ -1,4 +1,6 @@
 import * as ScrollMagic from "scrollmagic";
+import gsap, {TimelineMax, Power1} from 'gsap'
+gsap.registerPlugin(TimelineMax);
 
 export default class Card {
   constructor({title, description, type}){
@@ -21,7 +23,7 @@ export default class Card {
   }
   
   scroll() {
-    const cards = document.querySelector(['.main_card-trains', '.main_card-flights'])
+    const cards = document.querySelector(['.main_card-trains', '.main_card-flights']);
     const controller = new ScrollMagic.Controller({
       globalSceneOptions: {
           triggerHook: "onEnter"
