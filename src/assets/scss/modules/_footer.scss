@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  background: $darkBlue;
+  box-shadow: 0.2em 0 0.4em rgba(0, 0, 0, .45);
+  z-index: 1;
+  margin-top: 30px;
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .footer_socials {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%;
+      margin: 0 auto;
+
+      .footer_social {
+        height: 64px;
+        width: 64px;
+        cursor: pointer;
+      }
+    }
+  }
+}

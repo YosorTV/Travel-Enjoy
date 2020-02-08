@@ -21,18 +21,14 @@ export default class Card {
     container.prepend(block);
     this.scroll();
   }
-  
+
   scroll() {
     const cards = document.querySelector(['.main_card-trains', '.main_card-flights']);
-    const controller = new ScrollMagic.Controller({
-      globalSceneOptions: {
-          triggerHook: "onEnter"
-      }
-  });
+    const controller = new ScrollMagic.Controller();
     const scene = new ScrollMagic.Scene({
       triggerElement: cards,
-      duration: '100%',
-      offset: '50%'
+      triggerHook: 0.9,
+      reverse: false
     })
     scene.setClassToggle(cards, 'fade-in');
     scene.addTo(controller);
