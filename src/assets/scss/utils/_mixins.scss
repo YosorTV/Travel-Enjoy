@@ -7,30 +7,29 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: $white;
+    background: $darkBlue;
   }
 
   ::-webkit-scrollbar-track {
-    background: $darkBlue;
+    background: $white;
   }
 
   // For Internet Explorer
   body {
-    scrollbar-face-color: $darkBlue;;
-    scrollbar-track-color: $white;
+    scrollbar-face-color: $white;
+    scrollbar-track-color: $darkBlue;
   }
 }
 
-@mixin btn($width: 60%, $height: 60%, $font: 16px, $top: 35px) {
+@mixin btn($width: 60%, $height: 60%, $font: 16px) {
   position: relative;
-  top: $top;
+  margin-top: 35px;
   padding: 15px 30px;
   border: 4px solid $white;
   text-transform: uppercase;
   color: $white;
   background: none;
   width: 60%;
-  height: 60px;
   font-size: $font;
   cursor: pointer;
 
@@ -62,4 +61,10 @@
   &:hover::after {
     right: 80%;
   }
+}
+
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
 }

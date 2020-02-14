@@ -116,8 +116,7 @@
     cursor: pointer;
 
     img {
-      width: 600px;
-      height: 400px;
+      @include size(600px, 400px);
       margin: 15px;
 
       &:nth-child(1) {

@@ -2,7 +2,7 @@ import Card from './mainCards';
 
 const card1 = new Card({
     type: 'main_card-flights',
-    title: 'Travel with our Flights Tours',
+    title: 'Travel with our Flight Tours',
     description: `We have provided you with an exciting trip to Sydney, during the tour you will learn about the rich culture
     of Australia. We will open the doors welcoming Australia. Sydney is one of the most beautiful cities
     in Australia. Business card of Hungary are thermal spas, and in this you can see by visiting the hot springs
@@ -11,10 +11,10 @@ const card1 = new Card({
     form of which is evident in every corner of the city and artfully combined with modern art, music and lifestyle.`,
   })
   card1.render('.main-cards');
-  
+
   const card2 = new Card({
     type: 'main_card-trains',
-    title: 'Travel with our Trains Tours',
+    title: 'Travel with our Train Tours',
     description: `Spain, a country which is not possible to forget! Barcelona is a city of paints, which in your memory for a
     long time will leave pleasant memories. You will visit the most famous places in Barcelona. Next you will
     visit the Principality of Monaco is a tiny state, the main attraction of which is the most famous casino of
