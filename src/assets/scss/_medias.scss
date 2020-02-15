@@ -138,16 +138,67 @@
   }
 }
 
-@media screen and (max-width:1024px){
+@media screen and (max-width: 1024px){
   body {
     .container {
       padding: 0 25px 0 25px !important;
     }
     .navbar{
-      height: 6vh !important;
+      position: relative;
+      .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        .menu_line{
+          @include size(30px, 2px);
+          background: $white;
+          margin: 5px;
+        }
+      }
+      .nav-links{
+        position: fixed;
+        top: 0;
+        @include size(100% !important, 100vh !important);
+        flex-direction: column;
+        background: $darkBlue;
+        clip-path: circle(100px at 90% -20%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        li{
+          font-size: 2rem !important;
+          z-index: 1;
+          opacity: 0;
+          &:nth-child(1){
+            transition: all .5s ease .2s;
+          }
+          &:nth-child(2){
+            transition: all .5s ease .4s;
+          }
+          &:nth-child(3){
+            transition: all .5s ease .6s;
+          }
+          &:nth-child(4){
+            transition: all .5s ease .8s;
+          }
+          &:nth-child(5){
+            transition: all .5s ease 1s;
+          }
+        }
+        .fade{
+          opacity: 1;
+        }
+      }
+      .open{
+        clip-path: circle(160vh at 90% -20%) !important;
+        pointer-events: all;
+        z-index: 1;
+      }
     }
     .header-section{
-      height: 45vh !important;
+      height: 60vh !important;
 
       .door-illusion {
         @include size(350px !important, 350px !important);

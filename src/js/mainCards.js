@@ -23,25 +23,13 @@ export default class Card {
   }
 
   scroll() {
-    const ipadMedia = window.matchMedia("(min-width: 1024px)");
     const cards = document.querySelector(['.main_card-trains', '.main_card-flights']);
-    const mediaOn = (x) => {
-      if (x.matches) {
-        triggerHook: 0.4
-      } else {
-        triggerHook: 0.9
-      }
-    }
-
     const controller = new ScrollMagic.Controller();
     const scene = new ScrollMagic.Scene({
       triggerElement: cards,
-      triggerHook: mediaOn,
       reverse: false
     })
     scene.setClassToggle(cards, 'fade-in');
     scene.addTo(controller);
-    mediaOn(ipadMedia),
-    ipadMedia.addListener(mediaOn)
   }
 }

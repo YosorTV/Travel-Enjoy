@@ -5,3 +5,4 @@ import './js/header';
 import './js/mainCards';
 import './js/mainUi';
 import './js/mainTabs';
+import './js/menu';
