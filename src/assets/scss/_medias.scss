@@ -46,7 +46,6 @@
   }
 }
 
-
 @media screen and (max-width:1300px) {
   .door-illusion {
     @include size(450px !important, 450px !important);
@@ -62,7 +61,6 @@
     width: 82% !important;
   }
 }
-
 
 @media screen and (max-width:1240px) {
   .header-content_wrapper {
@@ -237,3 +235,52 @@
     margin: 7px !important;
   }
 }
+
+@media screen and (max-width:768px){
+  body{
+    .container{
+      padding: 0 12px 0 12px !important;
+    }
+    .header-content_wrapper{
+      flex-direction: column !important;
+      height: 50% !important;
+      position: relative;
+      .text_wrapper{
+        align-items: center !important;
+        margin-top: 30px !important;
+        .text{
+          text-align: center;
+          line-height: 1.4 !important;
+        }
+        .title{
+          display: none;
+        }
+        .btn{
+          position: absolute !important;
+          width: 34% !important;
+          top: 52vh !important;
+          margin-top: 0 !important;
+        }
+      }
+      .show-places{
+        margin-top: 15px !important;
+      }
+    }
+  }
+  .header-section{
+    background: $gradient1_ipad !important;
+  }
+  aside{
+    margin-right: 30px !important;
+  }
+}
+
+// @media screen and (max-width: 414px){
+//   .door-illusion {
+//     @include size(150px !important, 150px !important);
+
+//     .img {
+//       @include size(125px !important, 125px !important);
+//     }
+//   }
+// }
