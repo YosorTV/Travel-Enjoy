@@ -136,27 +136,31 @@
   }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   body {
     .container {
       padding: 0 25px 0 25px !important;
     }
-    .navbar{
+
+    .navbar {
       position: relative;
-      .hamburger{
+
+      .hamburger {
         position: absolute;
         cursor: pointer;
         right: 5%;
         top: 50%;
         transform: translate(-5%, -50%);
         z-index: 2;
-        .menu_line{
+
+        .menu_line {
           @include size(30px, 2px);
           background: $white;
           margin: 5px;
         }
       }
-      .nav-links{
+
+      .nav-links {
         position: fixed;
         top: 0;
         @include size(100% !important, 100vh !important);
@@ -165,37 +169,46 @@
         clip-path: circle(100px at 90% -20%);
         transition: all 1s ease-out;
         pointer-events: none;
-        li{
+
+        li {
           font-size: 2rem !important;
           z-index: 1;
           opacity: 0;
-          &:nth-child(1){
+
+          &:nth-child(1) {
             transition: all .5s ease .2s;
           }
-          &:nth-child(2){
+
+          &:nth-child(2) {
             transition: all .5s ease .4s;
           }
-          &:nth-child(3){
+
+          &:nth-child(3) {
             transition: all .5s ease .6s;
           }
-          &:nth-child(4){
+
+          &:nth-child(4) {
             transition: all .5s ease .8s;
           }
-          &:nth-child(5){
+
+          &:nth-child(5) {
             transition: all .5s ease 1s;
           }
         }
-        .fade{
+
+        .fade {
           opacity: 1;
         }
       }
-      .open{
+
+      .open {
         clip-path: circle(160vh at 90% -20%) !important;
         pointer-events: all;
         z-index: 1;
       }
     }
-    .header-section{
+
+    .header-section {
       height: 60vh !important;
 
       .door-illusion {
@@ -206,12 +219,15 @@
         }
       }
     }
+
     .main {
       .main-cards {
         grid-column-gap: 15px !important;
-        figure{
+
+        figure {
           padding: 15px !important;
         }
+
         h2 {
           font-size: 1.2rem !important;
         }
@@ -224,63 +240,173 @@
     }
   }
 
-  .main-tabs_nav{
+  .main-tabs_nav {
     width: 85% !important;
     padding: 15px !important;
     font-size: 20px !important;
   }
 
-  .main-tab_content > img {
+  .main-tab_content>img {
     @include size(416px !important, 308px !important);
     margin: 7px !important;
   }
 }
 
-@media screen and (max-width:768px){
-  body{
-    .container{
+@media screen and (max-width:768px) {
+  body {
+    .container {
       padding: 0 12px 0 12px !important;
     }
-    .header-content_wrapper{
+
+    .header-content_wrapper {
       flex-direction: column !important;
       height: 50% !important;
       position: relative;
-      .text_wrapper{
+
+      .text_wrapper {
         align-items: center !important;
         margin-top: 30px !important;
-        .text{
+
+        .text {
           text-align: center;
           line-height: 1.4 !important;
         }
-        .title{
+
+        .title {
           display: none;
         }
-        .btn{
+
+        .btn {
           position: absolute !important;
           width: 34% !important;
           top: 52vh !important;
           margin-top: 0 !important;
         }
       }
-      .show-places{
+
+      .show-places {
         margin-top: 15px !important;
       }
     }
   }
-  .header-section{
+
+  .header-section {
     background: $gradient1_ipad !important;
   }
-  aside{
+
+  aside {
     margin-right: 30px !important;
   }
 }
 
-// @media screen and (max-width: 414px){
-//   .door-illusion {
-//     @include size(150px !important, 150px !important);
+@media screen and (max-width: 624px) {
+  body {
+    .container {
+      padding: 0 5px 0 5px !important;
+    }
 
-//     .img {
-//       @include size(125px !important, 125px !important);
-//     }
-//   }
-// }
+    .header-content_wrapper {
+      flex-direction: column !important;
+      height: 74% !important;
+      position: relative !important;
+
+      .text_wrapper {
+        align-items: center !important;
+        margin-top: 15px !important;
+
+        .text {
+          text-align: center;
+          font-size: 1.8rem !important;
+          line-height: 1.6 !important;
+        }
+
+        .btn {
+          position: absolute !important;
+          width: 32% !important;
+          top: 50vh !important;
+          width: 32% !important;
+          font-size: 10px !important;
+          padding: 8px 10px !important;
+        }
+      }
+
+      .show-places {
+        margin-top: 7px !important;
+
+        .door-illusion {
+          @include size(220px !important, 220px !important);
+
+          .img {
+            @include size(160px !important, 160px !important);
+          }
+        }
+      }
+    }
+
+    aside {
+      margin-right: 15px !important;
+
+      .line {
+        right: 12px !important;
+      }
+
+      .places-name>li>a {
+        font-size: 16px !important;
+
+        &:focus {
+          font-size: 18px !important;
+        }
+      }
+    }
+
+    .main {
+      .main-tabs_nav {
+        width: 95%!important;
+        padding: 8px!important;
+        font-size: 14px!important;
+      }
+      .main-cards {
+        grid-column-gap: 5px !important;
+
+        figure {
+          padding: 10px !important;
+        }
+
+        h2 {
+          font-size: 1.1rem !important;
+        }
+
+        p {
+          font-size: .9rem !important;
+          line-height: 1.1 !important;
+        }
+
+        .main_card-flights {
+          margin-left: 2px !important;
+        }
+      }
+      .main-tab_content>img {
+        @include size(320px!important, 240px!important);
+        margin: 5px!important;
+        &:nth-child(1) {
+          box-shadow: -5px -5px 1px 1px $darkBlue;
+        }
+        &:nth-child(2) {
+          box-shadow: 5px -5px 1px 1px $darkBlue;
+        }
+        &:nth-child(3) {
+          box-shadow: -5px 5px 1px 1px $darkBlue;
+        }
+        &:nth-child(4) {
+          box-shadow: 5px 5px 1px 1px $darkBlue;
+        }
+      }
+    }
+    .footer_socials{
+      width: 100% !important;
+      img{
+        @include size(42px !important, 42px !important);
+      }
+    }
+  }
+}
