@@ -299,34 +299,51 @@
   }
 }
 
-@media screen and (max-width: 624px) {
+@media screen and (max-width: 414px) {
   body {
     .container {
       padding: 0 5px 0 5px !important;
     }
 
+    .navbar {
+      .nav-links {
+        li {
+          font-size: 1.4rem !important;
+        }
+      }
+
+      .open {
+        clip-path: circle(124vh at 90% -5%) !important;
+        pointer-events: all;
+        z-index: 1;
+      }
+    }
+
+    .header-section {
+      background: $gradient1_mobile !important;
+    }
+
     .header-content_wrapper {
       flex-direction: column !important;
-      height: 74% !important;
+      height: 78% !important;
       position: relative !important;
 
       .text_wrapper {
         align-items: center !important;
-        margin-top: 15px !important;
+        margin-top: 14px !important;
 
         .text {
           text-align: center;
-          font-size: 1.8rem !important;
-          line-height: 1.6 !important;
+          font-size: 1.6rem !important;
+          line-height: 1.4 !important;
         }
 
         .btn {
           position: absolute !important;
-          width: 32% !important;
-          top: 50vh !important;
-          width: 32% !important;
-          font-size: 10px !important;
-          padding: 8px 10px !important;
+          top: 52vh !important;
+          width: 40% !important;
+          font-size: 8px !important;
+          padding: 8px 8px !important;
         }
       }
 
@@ -334,78 +351,93 @@
         margin-top: 7px !important;
 
         .door-illusion {
-          @include size(220px !important, 220px !important);
+          @include size(240px !important, 240px !important);
 
           .img {
-            @include size(160px !important, 160px !important);
+            @include size(170px !important, 170px !important);
           }
         }
       }
     }
 
     aside {
-      margin-right: 15px !important;
+      margin-right: 5px !important;
 
       .line {
         right: 12px !important;
+        padding-top: 24px !important;
+      }
+
+      .places-name>li {
+        letter-spacing: 1.4px !important;
+        line-height: 1.8 !important;
       }
 
       .places-name>li>a {
-        font-size: 16px !important;
+        font-size: 12px !important;
 
         &:focus {
-          font-size: 18px !important;
+          font-size: 14px !important;
         }
       }
     }
 
     .main {
       .main-tabs_nav {
-        width: 95%!important;
-        padding: 8px!important;
-        font-size: 14px!important;
+        width: 95% !important;
+        padding: 6px !important;
+        font-size: 12px !important;
       }
+
       .main-cards {
         grid-column-gap: 5px !important;
 
         figure {
-          padding: 10px !important;
+          padding: 6px !important;
         }
 
         h2 {
-          font-size: 1.1rem !important;
+          font-size: 0.74rem !important;
+          padding-bottom: 2px !important;
         }
 
         p {
-          font-size: .9rem !important;
-          line-height: 1.1 !important;
+          font-size: .7rem !important;
+          line-height: 1 !important;
         }
 
         .main_card-flights {
           margin-left: 2px !important;
         }
       }
+
       .main-tab_content>img {
-        @include size(320px!important, 240px!important);
-        margin: 5px!important;
+        @include size(280px !important, 220px !important);
+        margin: 10px !important;
+
         &:nth-child(1) {
           box-shadow: -5px -5px 1px 1px $darkBlue;
         }
+
         &:nth-child(2) {
           box-shadow: 5px -5px 1px 1px $darkBlue;
         }
+
         &:nth-child(3) {
           box-shadow: -5px 5px 1px 1px $darkBlue;
         }
+
         &:nth-child(4) {
           box-shadow: 5px 5px 1px 1px $darkBlue;
         }
       }
     }
-    .footer_socials{
+
+    .footer_socials {
       width: 100% !important;
-      img{
-        @include size(42px !important, 42px !important);
+
+      img {
+        @include size(34px !important, 34px !important);
       }
     }
   }
