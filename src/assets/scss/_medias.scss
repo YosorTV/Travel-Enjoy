@@ -442,3 +442,113 @@
     }
   }
 }
+
+
+@media screen and (max-width: 375px){
+  body {
+    .container {
+      padding: 0 5px 0 5px !important;
+    }
+
+    .navbar {
+      .open {
+        clip-path: circle(115vh at 90% -5%) !important;
+        pointer-events: all;
+        z-index: 1;
+      }
+    }
+
+    .header-section {
+      height: 58vh !important;
+      background: $gradient1_mobile !important;
+    }
+
+    .header-content_wrapper {
+      height: 74% !important;
+
+      .text_wrapper {
+        margin-top: 30px !important;
+
+        .text {
+          font-size: 1.4rem !important;
+          line-height: 1.2 !important;
+        }
+
+        .btn {
+          top: 50vh !important;
+          width: 34%!important;
+          font-size: 7px!important;
+          padding: 8px!important;
+        }
+      }
+
+      .show-places {
+        margin-top: 7px !important;
+        .door-illusion {
+          @include size(170px !important, 170px !important);
+          .img {
+            @include size(120px !important, 120px !important);
+          }
+        }
+      }
+    }
+
+    aside {
+      margin-right: 5px !important;
+      .line {
+        right: 6px !important;
+        padding-top: 12px !important;
+      }
+
+      .places-name>li {
+        letter-spacing: 1.2px !important;
+        line-height: 1.6 !important;
+      }
+
+      .places-name>li>a {
+        font-size: 10px !important;
+        &:focus {
+          font-size: 12px !important;
+        }
+      }
+    }
+
+    .main {
+      .main-tabs_nav {
+        width: 95% !important;
+        padding: 10px !important;
+        font-size: 10px !important;
+      }
+
+      .main-cards {
+        grid-column-gap: 5px !important;
+        figure {
+          padding: 6px !important;
+        }
+        h2 {
+          font-size: 0.68rem !important;
+          padding-bottom: 2px !important;
+        }
+        p {
+          font-size: .6rem !important;
+          line-height: 1.1 !important;
+        }
+        .main_card-flights {
+          margin-left: 2px !important;
+        }
+      }
+
+      .main-tab_content>img {
+        @include size(240px !important, 180px !important);
+        margin: 10px !important;
+      }
+    }
+
+    .footer_socials {
+
+      img {
+        @include size(34px !important, 34px !important);
+      }
+    }
+  }
+}
