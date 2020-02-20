@@ -169,12 +169,12 @@
         clip-path: circle(100px at 90% -20%);
         transition: all 1s ease-out;
         pointer-events: none;
-
+        overflow: hidden !important;
         li {
           font-size: 2rem !important;
           z-index: 1;
           opacity: 0;
-
+          overflow: hidden !important;
           &:nth-child(1) {
             transition: all .5s ease .2s;
           }
@@ -205,6 +205,7 @@
         clip-path: circle(160vh at 90% -20%) !important;
         pointer-events: all;
         z-index: 1;
+        overflow: hidden !important;
       }
     }
 

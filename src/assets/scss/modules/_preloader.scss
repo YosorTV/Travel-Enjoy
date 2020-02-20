@@ -1,94 +1,52 @@
-.preload{
-  position: fixed;
-  top: 0;
-  @include size(100%, 100vh);
-  background: $darkBlue;
+body{
+    overflow-y:hidden;
+}
+
+.box {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 10;
-  .cloud1,
-  .cloud2,
-  .cloud3,
-  .cloud4,
-  .cloud5,
-  .cloud6 {
-    height: 100px;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-  }
-
-  .cloud1{
-    top: 16%;
-    transform: translate(100%, -16%);
-    animation: clouds 5s linear infinite;
-  }
-  .cloud2{
-    top: 32%;
-    transform: translate(100%, -20%);
-    animation: clouds 5s linear infinite 1s;
-  }
-  .cloud3{
-    top: 48%;
-    transform: translate(140%, -52%);
-    animation: clouds 5s linear infinite 2s;
-  }
-  .cloud4{
-    top: 64%;
-    transform: translate(160%, 136%);
-    animation: clouds 5s linear infinite 1.5s;
-  }
-  .cloud5{
-    top: 80%;
-    transform: translate(180%, -80%);
-    animation: clouds 5s linear infinite 3s;
-  }
-  .cloud6{
-    top: 96%;
-    transform: translate(200%, -680%);
-    animation: clouds 5s linear infinite 2.5s;
-  }
-
-  .airplane{
+  justify-content: center;
+  background: $darkBlue;
+  z-index: 2;
+  .preload {
+    position: relative;
+    width: 200px;
     height: 200px;
-    animation: airplane 1.2s ease infinite alternate;
-  }
-
-  h3{
-    position: absolute;
-    color: $white;
-    font-family: $ElMessiri;
-    top: 75%;
-    font-size: 62px;
-    letter-spacing: 5px;
-    transition: .1s all;
-    animation: text 6s linear;
-  }
-
-
-}
-
-@keyframes airplane {
-  from{
-    transform: translateY(-50px);
-  }
-  to{
-    transform: translateY(50px);
+    border-radius: 50%;
+    background: 
+      linear-gradient(45deg, transparent, transparent 40%, yellow),
+      linear-gradient($lightGrey, $darkGrey);
+    animation: rotate 1.5s linear infinite;
+    &:before,
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      background: linear-gradient($lightGrey, $darkGrey);
+      border-radius: inherit;
+    }
+    &:before {
+      background: linear-gradient(45deg, transparent, transparent 40%, yellow);
+      filter: blur(32px);
+    }
   }
 }
 
-@keyframes clouds {
-  from{
-    right: 0%;
-  }
-  to{
-    right: 130%;
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
   }
 }
-
 .preload-finish{
   transition: .5s ease;
   display: none;
   visibility: hidden;
 }
+

@@ -61,7 +61,7 @@ const switchImg = (imgNumber) => {
 
   images.forEach((img, index) => {
     if (index === imgNumber)
-      tl.fromTo(img, .6, {y: -400}, {y:0, ease:Power1.easeOut});
+      tl.fromTo(img, .6, {y: -600}, {y:-10, ease:Power1.easeOut});
   })
 
   tl.fromTo(doorIllusion, .3, {boxShadow: 'inset 0em 3em 2em #000'},{boxShadow: 'inset 0em 0em 0em #000', ease:Power2.easeOut});
